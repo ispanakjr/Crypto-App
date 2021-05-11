@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" render={(props) => <Pokedex {...props} />} />
-        <Route exact path="/:pokemonId" render={(props) => <Pokemon {...props} />} />
+        <Route exact path="/pokemon-app/" render={(props) => <Pokedex {...props} />} />
+        <Route exact path="/pokemon-app/:pokemonId" render={(props) => <Pokemon {...props} />} />
       </Switch>
     </Router>
   );

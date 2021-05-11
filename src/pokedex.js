@@ -90,7 +90,7 @@ const Pokedex = (props) => {
 
     return (
       <Grid item xs={12} sm={4}>
-        <Card onClick={() => history.push(`/${pokemonId}`)}>
+        <Card onClick={() => history.push(`/pokemon-app/${pokemonId}`)}>
           <CardMedia
             className={classes.cardMedia}
             image={sprite}
@@ -107,26 +107,29 @@ const Pokedex = (props) => {
   return (
     <>
       <AppBar position="static">
-
-        <Toolbar >
-          <div className = {classes.searchContainer}>
-            <SearchIcon className= {classes.searchIcon} />
-            <TextField 
-            onChange = {handleFilter}
-            className={classes.searchInput} label="Search Pokemon" />
+        <Toolbar>
+          <div className={classes.searchContainer}>
+            <SearchIcon className={classes.searchIcon} />
+            <TextField
+              onChange={handleFilter}
+              className={classes.searchInput}
+              label="Search Pokemon"
+            />
           </div>
-
         </Toolbar>
       </AppBar>
       {pokemonData ? (
         <Grid container spacing={3} className={classes.pokodexContainer}>
-          {Object.keys(pokemonData).map((pokemonId) =>
+          {Object.keys(pokemonData).map(
+            (pokemonId) =>
               pokemonData[pokemonId].name.includes(pokeFilter) &&
               getPokemonCard(pokemonId)
           )}
         </Grid>
       ) : (
-        <CircularProgress />
+        <div>
+          <CircularProgress />
+        </div>
       )}
     </>
   );
