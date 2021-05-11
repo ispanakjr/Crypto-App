@@ -102,7 +102,7 @@ const Pokemon = (props) => {
             <div className={classes.pokeContainer}>
                 <Box boxShadow={24} className={classes.card}>
                     <Card variant="outlined" className={classes.card}>
-                        <CardHeader className={classes.cardHeader} avatar={<Avatar className={classes.avatar}> {`${id}`} </Avatar>} classes={{ action: classes.recep, avatar: classes.cagri }} action={<Link underline="none" component={RouterLink} to="/pokemon-app/"><Button variant="contained" color="secondary">Back Index</Button></Link>} title={<Typography className={classes.header} variant='h3'>{name}
+                        <CardHeader className={classes.cardHeader} avatar={<Avatar className={classes.avatar}> {`${id}`} </Avatar>} classes={{ action: classes.recep, avatar: classes.cagri }} action={<Link underline="none" component={RouterLink} to="/"><Button variant="contained" color="secondary">Back Index</Button></Link>} title={<Typography className={classes.header} variant='h3'>{name}
                         </Typography>} />
 
                         <CardMedia className={classes.image} image={fullImageUrl} title="pokemon" ></CardMedia>

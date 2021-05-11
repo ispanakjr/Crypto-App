@@ -69,9 +69,8 @@ const Pokedex = (props) => {
           const pokeList = {
             id: index + 1,
             name: currentValue.name,
-            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-              index + 1
-            }.png`,
+            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1
+              }.png`,
           };
           const newPokeList = { ...prevValue, [index + 1]: pokeList };
           return newPokeList;
@@ -90,7 +89,7 @@ const Pokedex = (props) => {
 
     return (
       <Grid item xs={12} sm={4}>
-        <Card onClick={() => history.push(`/pokemon-app/${pokemonId}`)}>
+        <Card onClick={() => history.push(`/${pokemonId}`)}>
           <CardMedia
             className={classes.cardMedia}
             image={sprite}
